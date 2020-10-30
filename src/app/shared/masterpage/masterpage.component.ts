@@ -13,6 +13,8 @@ export class MasterpageComponent implements OnInit {
   sidenavMode$: Observable<string> = of('over');
   sidenavOpen$: Observable<boolean> = of(false);
 
+  headerOpen$: Observable<boolean> = of(true);
+
   constructor(
     private breakpointObserver: BreakpointObserver,
   ) { }

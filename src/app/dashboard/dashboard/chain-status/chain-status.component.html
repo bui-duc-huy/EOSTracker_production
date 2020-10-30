@@ -1,9 +1,9 @@
-<mat-card *ngIf="(status$ | async) as status">
+<mat-card *ngIf="(status$ | async) as status" style="width: 70%;">
   <mat-card-title fxLayout="row" fxLayoutAlign="start center">
     <mat-icon>network_check</mat-icon>
     {{ 'Network Info' | translate }}
   </mat-card-title>
-  <mat-card-content class="table-container">
+  <mat-card-content class="table-container" style="width: 100%;">
     <table>
       <tr>
         <td>{{ 'Server Version' | translate }}:</td>
@@ -29,7 +29,8 @@
       </tr>
       <tr>
         <td>{{ 'Last Irreversible Block #' | translate }}:</td>
-        <td><a [routerLink]="['/blocks',status.last_irreversible_block_num]">{{status.last_irreversible_block_num}}</a></td>
+        <td><a [routerLink]="['/blocks',status.last_irreversible_block_num]">{{status.last_irreversible_block_num}}</a>
+        </td>
       </tr>
     </table>
   </mat-card-content>

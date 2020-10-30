@@ -23,11 +23,6 @@ export class SidenavComponent implements OnInit {
   ngOnInit() {
     this.navs = [
       {
-        icon: 'dashboard',
-        link: '/',
-        name: this.translate.instant('Dashboard')
-      },
-      {
         icon: 'gavel',
         link: '/producers',
         name: this.translate.instant('Producers')
@@ -42,23 +37,6 @@ export class SidenavComponent implements OnInit {
         link: '/transactions',
         name: this.translate.instant('Transactions')
       },
-      {
-        icon: 'settings',
-        link: '/settings',
-        name: this.translate.instant('Settings')
-      },
-      {
-        icon: 'account_balance_wallet',
-        external: true,
-        link: environment.walletUrl,
-        name: this.translate.instant('Wallet')
-      },
-      {
-        icon: 'how_to_vote',
-        external: true,
-        link: environment.votingUrl,
-        name: this.translate.instant('Voting')
-      }
     ];
   }
 

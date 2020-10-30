@@ -3,10 +3,18 @@
     <button mat-icon-button fxHide.gt-sm (click)="onMenuToggle.emit()">
       <mat-icon>menu</mat-icon>
     </button>
-    <a class="brand" routerLink="/">
-      <img [src]="logoUrl" />
-      <span>{{ appName | translate }}</span>
-    </a>
+    <div fxFlex>
+      <a class="brand" routerLink="/">
+        <img [src]="logoUrl" />
+      </a>
+    </div>
   </div>
-  <app-search (onSearchExpanded)="searchExpanded = $event" [ngClass]="searchExpanded ? 'search-expanded' : 'search-collapsed'"></app-search>
+  <ng-container *ngFor="let nav of navs">
+    <a *ngIf="headerOpen$" mat-list-item [routerLink]="nav.link" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">
+      <span matLine>{{nav.name}}</span>
+    </a>
+  </ng-container>
+  <app-search (onSearchExpanded)="searchExpanded = $event"
+    [ngClass]="searchExpanded ? 'search-expanded' : 'search-collapsed'"></app-search>
 </header>

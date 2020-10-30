@@ -3,7 +3,7 @@ export const environment = {
   walletUrl: 'https://walleteos.com',
   votingUrl: 'https://eosportal.io',
   appName: 'EOS Tracker',
-  logoUrl: '/assets/logo.png',
+  logoUrl: 'https://res.cloudinary.com/agridential/image/upload/v1584444193/Blockexplorer/vbc_vrteo4.png',
   blockchainUrl: 'http://128.199.192.37:8890',
   chainId: '0000000000000000000000000000000000000000000000000000000000000000',
   showAds: true,
